@@ -7,28 +7,82 @@
     <title>Calculator</title>
   </head>
   <body>
-    <main>
+    <main class="main">
       <div class="calculator">
-        <input type="text" id="result" readonly />
-        <button class="button" onclick="clearResult()">C</button>
-        <button class="button" onclick="deleteLastCharacter()">DEL</button>
-        <button class="button" onclick="appendCharacter('7')">7</button>
-        <button class="button" onclick="appendCharacter('8')">8</button>
-        <button class="button" onclick="appendCharacter('9')">9</button>
-        <button class="button" onclick="appendCharacter('4')">4</button>
-        <button class="button" onclick="appendCharacter('5')">5</button>
-        <button class="button" onclick="appendCharacter('6')">6</button>
-        <button class="button" onclick="appendCharacter('1')">1</button>
-        <button class="button" onclick="appendCharacter('2')">2</button>
-        <button class="button" onclick="appendCharacter('3')">3</button>
-        <button class="button" onclick="appendCharacter('0')">0</button>
-        <button class="button" onclick="appendCharacter('.')">.</button>
-        <button class="button" onclick="calculateResult()">=</button>
-        <button class="button" onclick="appendCharacter('+')">+</button>
-        <button class="button" onclick="appendCharacter('-')">-</button>
-        <button class="button" onclick="appendCharacter('*')">*</button>
-        <button class="button" onclick="appendCharacter('/')">/</button>
+        <div class="screen">
+          <div class="screen-current" id="current-status">0</div>
+        </div>
+        <!-- <input type="text" id="result" readonly /> -->
+        <div class="buttons-grid">
+          <button class="button" onclick="clearResult()" id="clear-btn">
+            CLEAR
+          </button>
+          <button
+            class="button"
+            onclick="deleteLastCharacter()"
+            id="delete-btn"
+          >
+            DEL
+          </button>
+          <button class="button" onclick="appendCharacter('7')" data-number>
+            7
+          </button>
+          <button class="button" onclick="appendCharacter('8')" data-number>
+            8
+          </button>
+          <button class="button" onclick="appendCharacter('9')" data-number>
+            9
+          </button>
+          <button class="button" onclick="appendCharacter('4')" data-number>
+            4
+          </button>
+          <button class="button" onclick="appendCharacter('5')" data-number>
+            5
+          </button>
+          <button class="button" onclick="appendCharacter('6')" data-number>
+            6
+          </button>
+          <button class="button" onclick="appendCharacter('1')" data-number>
+            1
+          </button>
+          <button class="button" onclick="appendCharacter('2')" data-number>
+            2
+          </button>
+          <button class="button" onclick="appendCharacter('3')" data-number>
+            3
+          </button>
+          <button class="button" onclick="appendCharacter('0')" data-number>
+            0
+          </button>
+          <button class="button" onclick="appendCharacter('.')" id="pointBtn">
+            .
+          </button>
+          <button class="button" onclick="calculateResult()" id="equalsBtn">
+            =
+          </button>
+          <button class="button" onclick="appendCharacter('+')" data-operator>
+            +
+          </button>
+          <button class="button" onclick="appendCharacter('-')" data-operator>
+            -
+          </button>
+          <button class="button" onclick="appendCharacter('*')" data-operator>
+            *
+          </button>
+          <button class="button" onclick="appendCharacter('/')" data-operator>
+            /
+          </button>
+        </div>
       </div>
     </main>
+    <footer class="footer">
+      <p class="copyright">
+        Copyright &copy; <span class="year">2021</span> Developed by Ryan Delos
+        Santos
+      </p>
+      <a href="https://github.com/ryandelos" target="_blank">
+        <i class="fab fa-github"></i
+      ></a>
+    </footer>
   </body>
 </html>
