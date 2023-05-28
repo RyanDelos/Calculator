@@ -7,12 +7,12 @@
   --btn: #eee;
   --btn-hover: #ddd;
   --btn-active: #ccc;
-  --btn-red: #faa;
-  --btn-red-hover: #e99;
-  --btn-red-active: #d88;
-  --btn-blue: #aaf;
-  --btn-blue-hover: #99e;
-  --btn-blue-active: #88d;
+  --btn-del: #dde6ed;
+  --btn-del-hover: #c7cfd5;
+  --btn-del-active: #b1b8be;
+  --btn-clear: #7d8794;
+  --btn-clear-hover: #525f71;
+  --btn-clear-active: #3d4b5f;
 }
 
 *,
@@ -88,4 +88,71 @@ button {
 
 .span-2 {
   grid-column: span 2;
+}
+
+.button {
+  padding: 1.25rem;
+  border: 2px var(--border) solid;
+  border-radius: 5px;
+  background-color: var(--btn);
+  font-size: 1.25rem;
+}
+
+.button:hover {
+  /* background-color: var(--btn-hover); */
+}
+
+.button:active {
+  background-color: var(--btn-active);
+}
+
+.btn-del {
+  background-color: var(--btn-del);
+}
+
+.btn-del:hover {
+  background-color: var(--btn-del-hover);
+}
+
+.btn-del:active {
+  background-color: var(--btn-del-active);
+}
+
+.btn-clear {
+  color: #eee;
+  background-color: var(--btn-clear-hover);
+}
+
+.btn-clear:hover {
+  background-color: var(--btn-clear);
+}
+
+.btn-clear:active {
+  background-color: var(--btn-clear-active);
+}
+
+/* Disables input spinners in calc screen */
+
+/* Footer */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.25rem;
+}
+.fa-github {
+  color: var(--font);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
 }
