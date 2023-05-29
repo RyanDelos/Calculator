@@ -4,6 +4,8 @@ let firstOperand = '';
 let secondOperand = '';
 let currentOperation = null;
 let shouldResetScreen = false;
+let year = document.querySelector('.year');
+let currentYear = new Date().getFullYear();
 
 const numberButtons = document.querySelectorAll('[data-number]');
 const operatorButtons = document.querySelectorAll('[data-operator]');
@@ -149,3 +151,6 @@ function operate(operator, a, b) {
       return null;
   }
 }
+
+// footer section
+year.textContent = currentYear;
